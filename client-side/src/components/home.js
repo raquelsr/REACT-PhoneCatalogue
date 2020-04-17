@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { showPhones } from '../actions/actions';
 
 const data = [
     {
@@ -29,10 +31,21 @@ const data = [
 
 
 const Home = () => { 
+  const dataStorage = useSelector(state => state.phones);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(showPhones(data));
+  }, []);
+
   return (
     <React.Fragment>
       <h1>Welcome to phone catalogue!</h1>
-      {data.map(phone => <p key={phone.id}>{phone.name}</p>)}
+      { dataStorage && dataStorage.length > 0 ?
+        dataStorage.map(phone => <p key={phone.id}>{phone.name}</p>)
+        :
+        <p>No data</p>
+      }
     </React.Fragment>
   );
 }
