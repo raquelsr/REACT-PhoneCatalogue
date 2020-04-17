@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { showPhones } from '../actions/actions';
+import { getPhones } from '../actions/api';
 
 const data = [
     {
@@ -35,7 +35,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(showPhones(data));
+    dispatch(getPhones());
   }, []);
 
   return (
