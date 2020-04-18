@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getPhones());
-  }, []);
+  }, [dispatch]);
 
   return (
     <React.Fragment>
