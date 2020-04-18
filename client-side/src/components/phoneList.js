@@ -22,22 +22,14 @@ const PhoneList = () => {
     dispatch(showPhoneDetails(phone));
   }
 
-  /*return(
-      {phones.map(phone =>  
-        <button 
-          onClick = {() => selectPhone(phone)}  
-          key={phone.id}>
-          {phone.name}
-        </button>)}
-    </React.Fragment>
-  );*/
-
   return (
     <React.Fragment>
       <div className='root'>
         <GridList cellHeight={320} className='gridList'>
           {phones.map((phone) => (
-            <GridListTile onClick = {() => selectPhone(phone)} key = {phone.id}>
+            <GridListTile 
+              onClick = {() => selectPhone(phone)} 
+              key = {phone.id}>
               <img src={require(`../../images/${phone.imageFileName}`)} alt={phone.name} />
               <GridListTileBar
                 title={phone.name}
