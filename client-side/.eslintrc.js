@@ -6,9 +6,13 @@ module.exports = {
         "node": true
     },
     "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 2018,
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
     "rules": {
         "indent": ["error", 2],
@@ -16,7 +20,6 @@ module.exports = {
         "no-debugger": "error",
         "no-console": "error",
         "eqeqeq": "error",
-        "quotes": ["error", "double"],
-        "semi": ["error", "always"]
+        "no-unused-vars": "off"
     }
 };
