@@ -1,1 +1,2 @@
 export const SHOW_PHONES = 'SHOW_PHONES';
+export const SHOW_PHONE_DETAILS = 'SHOW_PHONE_DETAILS';
