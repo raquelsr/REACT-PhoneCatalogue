@@ -1,9 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router';
 
 const Phone = () => {
-  let { id }  = useParams(); // TODO: Si introduce la url directamente no tiene state
+  //let { id }  = useParams(); // TODO: Si introduce la url directamente no tiene state
 
   const phone = useSelector(state => state.phoneSelected);
   console.log(phone);
