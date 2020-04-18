@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPhones } from '../actions/api';
-import { showPhoneDetails } from '../actions';
+import PhoneList from './phoneList';
 
 const Home = () => { 
   const dataStorage = useSelector(state => state.phones);
@@ -15,12 +15,7 @@ const Home = () => {
     <React.Fragment>
       <h1>Welcome to phone catalogue!</h1>
       { dataStorage && dataStorage.length > 0 ?
-        dataStorage.map(phone => 
-          <button 
-            onClick = {() => dispatch(showPhoneDetails(phone))}  
-            key={phone.id}>
-            {phone.name}
-          </button>)
+        <PhoneList />
         :
         <p>No data</p>
       }
