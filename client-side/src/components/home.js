@@ -3,9 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getPhones } from '../actions/api';
 import PhoneList from './phoneList';
 import '../styles/home.css'
+import Spinner from './spinner';
 
 const Home = () => { 
-  const dataStorage = useSelector(state => state.phones);
+  const status = useSelector(state => state.status);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,10 +18,10 @@ const Home = () => {
     <React.Fragment>
       <div className='home'>
         <h1>PHONE CATALOGUE</h1>
-        { dataStorage && dataStorage.length > 0 ?
-          <PhoneList />
+        { status === 'loading' ?
+          <Spinner />
           :
-          <h5 className='data--empty'>No data available.</h5>
+          <PhoneList />
         }
       </div>
     </React.Fragment>

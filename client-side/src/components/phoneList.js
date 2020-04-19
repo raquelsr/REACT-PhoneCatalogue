@@ -25,24 +25,28 @@ const PhoneList = () => {
   return (
     <React.Fragment>
       <div className='root'>
-        <GridList cellHeight={320} className='gridList'>
-          {phones.map((phone) => (
-            <GridListTile 
-              onClick = {() => selectPhone(phone)} 
-              key = {phone.id}>
-              <img src={require(`../../images/${phone.imageFileName}`)} alt={phone.name} />
-              <GridListTileBar
-                title={phone.name}
-                subtitle={<span>by: {phone.id} - {phone.imageFileName}</span>}
-                actionIcon={
-                  <IconButton aria-label={`info about ${phone.name}`} className='icon'>
-                    <InfoIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-          ))}
-        </GridList>
+        {phones && phones.length > 0 ?
+          <GridList cellHeight={320} className='gridList'>
+            {phones.map((phone) => (
+              <GridListTile 
+                onClick = {() => selectPhone(phone)} 
+                key = {phone.id}>
+                <img src={require(`../../images/${phone.imageFileName}`)} alt={phone.name} />
+                <GridListTileBar
+                  title={phone.name}
+                  subtitle={<span>by: {phone.id} - {phone.imageFileName}</span>}
+                  actionIcon={
+                    <IconButton aria-label={`info about ${phone.name}`} className='icon'>
+                      <InfoIcon />
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+          </GridList>
+          :
+          <h5 className='data--empty'>No data available.</h5>
+        }
       </div>
     </React.Fragment>
 
