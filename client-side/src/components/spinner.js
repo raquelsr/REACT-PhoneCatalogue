@@ -4,7 +4,7 @@ import '../styles/spinner.css';
 
 const Spinner = () =>{
   return (
-    <CircularProgress className = "spinner" />
+    <CircularProgress />
   );
 }
 

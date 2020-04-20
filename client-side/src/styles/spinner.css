@@ -1,3 +1,10 @@
-.spinner {
-  color: purple !important;
+.MuiCircularProgress-root.MuiCircularProgress-colorPrimary.MuiCircularProgress-indeterminate {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+svg.MuiCircularProgress-svg {
+  height: 4em;
+  width: 100%;
+  color: #6F948E;
 }

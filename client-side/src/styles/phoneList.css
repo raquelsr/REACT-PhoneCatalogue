@@ -3,20 +3,41 @@ h2 {
   font-size: 4em;
 }
 
-.root {
-  display: 'flex';
-  flex-wrap: 'wrap';
-  justify-content: 'space-around';
-  overflow: 'hidden';
-  background-color: grey;
-  margin: 6%;
+.phone-list--full {
+  background-color: #6F948E;
+  margin: 0 6% 6% !important;
 }
 
-.gridList {
-  width: 500;
-  height: 450;
+li.MuiGridListTile-root {
+  padding: 0.3em !important;
+  height: 200px !important;
 }
 
-.icon {
-  color: 'rgba(255, 255, 255, 0.54)';
+@media only screen and (min-width: 600px) {
+  li.MuiGridListTile-root {
+    height: 600px !important;
+  }
+
+  .MuiGridListTileBar-title, .MuiGridListTileBar-subtitle {
+    text-align: center;
+  }
+}
+
+.MuiGridListTileBar-root.MuiGridListTileBar-titlePositionBottom.MuiGridListTileBar-rootSubtitle {
+  background-color: #6F948E;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+button.MuiButtonBase-root.MuiIconButton-root {
+  color: #FFF;
+}
+
+.phone-list--empty {
+  text-align: center;
+  background-color: #F8F8FF;
+  margin: 0 14%;
+  padding: 6%;
+  border: 10px #BECBCD solid;
+  font-size: 2em;
 }

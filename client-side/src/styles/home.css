@@ -10,12 +10,3 @@
   font-size: 3em;
   text-decoration: underline;
 }
-
-.home .data--empty {
-  text-align: center;
-  background-color: #F8F8FF;
-  margin: 0 14%;
-  padding: 6%;
-  border: 10px #BECBCD solid;
-  font-size: 2em;
-}
