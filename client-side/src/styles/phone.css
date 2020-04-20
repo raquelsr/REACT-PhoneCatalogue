@@ -1,35 +1,81 @@
-h3 {
+.phone-title {
   text-align: center;
   font-family: auto;
-  font-size: 2em;
+  font-size: 3em;
+  margin-bottom: 4%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-image {
+  width: 100%;
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+.phone-image img {
+  height: 14em;
+}
+
+.phone-description {
+  text-align: center;
+  margin: 0 6%;
+}
+
+.phone-description--bold {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.phone-description span {
+  font-weight: 700;
+}
+
+.phone-description--color {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.square {
+  width: 1em; 
+  height: 1em; 
+  margin-left: 3%;
+  border: 0.5px solid #000;
 }
 
 @media only screen and (min-width: 720px) {
   .details {
-    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
   }
 
-  .image, .description {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
+  .phone-image {
+    width: 50%;
   }
 
-  .image {
-    width: 20%;
-  }
-
-  .image img {
-    width: 20em;
-    margin-right: 10%;
+  .phone-image img {
     margin-left: 4%;
+    height: 22em;
   }
 
-  .description {
+  .phone-description {
     margin-right: 4%;
+    width: 50%;
+    text-align: left;
   }
+
+  .phone-description--color {
+    justify-content: left;
+  }
+}
+
+.phone--null {
+  text-align: center;
+  font-size: 4em;
+  font-family: monospace;
+  text-decoration: underline;
 }

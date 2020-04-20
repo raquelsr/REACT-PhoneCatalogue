@@ -14,31 +14,37 @@ const Phone = () => {
   if (!phone && !status) {
     dispatch(getPhoneById(id));
   }
-  console.log('phone' + status);
 
   if (status === 'loading') {
     return <Spinner />
-  } else {
-    return (phone ? 
+  } else if (phone) {
+    const phoneColor = {
+      background: phone.color
+    }
+    return (
       <div>
-        <h3>{phone.name}</h3>
+        <h2 className="phone-title">{phone.name}</h2>
         <div className="details">
-          <div className="image">
+          <div className="phone-image">
             <img src={require(`../../images/${phone.imageFileName}`)} alt={phone.name} />
           </div>
-          <div className="description">
-            <p>Manufacturer: {phone.manufacturer}</p>
-            <p>Description: {phone.description}</p>
-            <p>Color: {phone.color} </p>
-            <p>Price: {phone.price}</p>
-            <p>Screen: {phone.screen}</p>
-            <p>Processor: {phone.processor}</p>
-            <p>RAM: {phone.ram}</p>
+          <div className="phone-description">
+            <p><span>Manufacturer: </span>{phone.manufacturer}</p>
+            <p className="phone-description--bold">Description: </p>
+            <p>{phone.description}</p>
+            <div className="phone-description--color">
+              <span>Color: </span>
+              <div className="square" style={phoneColor}></div>
+            </div>
+            <p><span>Price: </span>{phone.price} €</p>
+            <p><span>Screen: </span>{phone.screen}</p>
+            <p><span>Processor: </span>{phone.processor}</p>
+            <p><span>RAM: </span>{phone.ram}</p>
           </div>
         </div>
-      </div> 
-      :
-      <p>No phone</p>);
+      </div>);
+  } else {
+    return <h5 className = "phone--null">Phone not found</h5>;
   }
 }
 
