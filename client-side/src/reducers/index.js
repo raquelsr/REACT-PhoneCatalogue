@@ -1,19 +1,16 @@
-import { SHOW_PHONES, SHOW_PHONE_DETAILS, DATA_REQUEST, DATA_FAILURE, DATA_SUCCESS } from '../actions/types';
+import * as Types from '../actions/types';
 
 const reducer = (state = '', action) => {
   switch (action.type) {
-  case DATA_REQUEST:
-    console.log('Cargando datos...');
+  case Types.DATA_REQUEST:
     return {...state, status: 'loading'};
-  case DATA_FAILURE:
-    console.log('Error datos');
+  case Types.DATA_FAILURE:
     return {...state, status: 'error'};
-  case DATA_SUCCESS:
-    console.log('Sucess');
+  case Types.DATA_SUCCESS:
     return {...state, status: 'success'};
-  case SHOW_PHONES:
+  case Types.SHOW_PHONES:
     return {...state, phones: action.payload};
-  case SHOW_PHONE_DETAILS:
+  case Types.SHOW_PHONE_DETAILS:
     return {...state, phoneSelected: action.payload};
   default:
     return state;

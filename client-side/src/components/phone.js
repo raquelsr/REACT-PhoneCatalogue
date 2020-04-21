@@ -44,7 +44,7 @@ const Phone = () => {
         </div>
       </div>);
   } else {
-    return <h5 className = "phone--null">Phone not found</h5>;
+    return <h5 className="phone--null">Phone not found</h5>;
   }
 }
 

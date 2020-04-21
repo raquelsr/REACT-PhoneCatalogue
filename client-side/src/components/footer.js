@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/footer.css';
 
-const Footer = () =>{
+const Footer = () => {
   return (
-    <div class="footer">
+    <div className="footer">
       <p>Raquel Serrano</p>
     </div>  
   );

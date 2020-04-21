@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPhones } from '../actions/api';
 import PhoneList from './phoneList';
-import '../styles/home.css'
+import '../styles/home.css';
 import Spinner from './spinner';
 
 const Home = () => { 

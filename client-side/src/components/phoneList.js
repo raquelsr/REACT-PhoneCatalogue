@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { showPhoneDetails } from '../actions'
 import { useHistory } from 'react-router-dom';
-import '../styles/phoneList.css'
+import '../styles/phoneList.css';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
@@ -16,8 +16,6 @@ const PhoneList = () => {
   const history = useHistory();
 
   const selectPhone = (phone) => {
-    console.log('click');
-    console.log(phone);
     history.push(`/${phone.id}`);
     dispatch(showPhoneDetails(phone));
   }
@@ -47,7 +45,6 @@ const PhoneList = () => {
         <h5 className='phone-list--empty'>No data available.</h5>
       }
     </React.Fragment>
-
   );
 }
 
