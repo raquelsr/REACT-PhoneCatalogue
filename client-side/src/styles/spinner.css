@@ -1,0 +1,11 @@
+.MuiCircularProgress-root.MuiCircularProgress-colorPrimary.MuiCircularProgress-indeterminate {
+  width: 100% !important;
+  height: 100% !important;
+  margin-top: 10em;
+}
+
+svg.MuiCircularProgress-svg {
+  height: 4em;
+  width: 100%;
+  color: var(--primary);
+}

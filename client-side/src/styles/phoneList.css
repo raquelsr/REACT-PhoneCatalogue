@@ -1,0 +1,43 @@
+h2 {
+  font-family: monospace;
+  font-size: 4em;
+}
+
+.phone-list--full {
+  background-color: var(--primary);
+  margin: 0 6% 6% !important;
+}
+
+li.MuiGridListTile-root {
+  padding: 0.3em !important;
+  height: 200px !important;
+}
+
+@media only screen and (min-width: 600px) {
+  li.MuiGridListTile-root {
+    height: 600px !important;
+  }
+
+  .MuiGridListTileBar-title, .MuiGridListTileBar-subtitle {
+    text-align: center;
+  }
+}
+
+.MuiGridListTileBar-root.MuiGridListTileBar-titlePositionBottom.MuiGridListTileBar-rootSubtitle {
+  background-color: var(--primary);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+button.MuiButtonBase-root.MuiIconButton-root {
+  color: var(--white);
+}
+
+.phone-list--empty {
+  text-align: center;
+  background-color: var(--grey-light);
+  margin: 0 14%;
+  padding: 6%;
+  border: 10px var(--grey) solid;
+  font-size: 2em;
+}
