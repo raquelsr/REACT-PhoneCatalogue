@@ -10,10 +10,17 @@ To run it, we must launch the following commands in the root of the folder:
 
 ```sh
 $ npm install
-$ node server.js
+$ npm run start
 ```
 
-Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+TYPE | ENDPOINT | Data
+--- | --- | ---
+GET | `/phones` | Return all phones data
+--- | --- | ---
+GET | `/phones/:id` | Return phone by *id*
+
+
+Open [http://localhost:3001/phones](http://localhost:3001/phones) to view it in the browser all phones data.
 
 
 - ### CLIENT SIDE / BACK-END
@@ -27,4 +34,4 @@ $ npm run start
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Finally, you will show the complete app in [http://localhost:3001](http://localhost:3001)
+Finally, you will show the complete app in [http://localhost:3000](http://localhost:3000)
