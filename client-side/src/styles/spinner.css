@@ -7,5 +7,5 @@
 svg.MuiCircularProgress-svg {
   height: 4em;
   width: 100%;
-  color: #6F948E;
+  color: var(--primary);
 }

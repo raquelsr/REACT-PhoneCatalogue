@@ -4,7 +4,7 @@ h2 {
 }
 
 .phone-list--full {
-  background-color: #6F948E;
+  background-color: var(--primary);
   margin: 0 6% 6% !important;
 }
 
@@ -24,20 +24,20 @@ li.MuiGridListTile-root {
 }
 
 .MuiGridListTileBar-root.MuiGridListTileBar-titlePositionBottom.MuiGridListTileBar-rootSubtitle {
-  background-color: #6F948E;
+  background-color: var(--primary);
   opacity: 0.8;
   cursor: pointer;
 }
 
 button.MuiButtonBase-root.MuiIconButton-root {
-  color: #FFF;
+  color: var(--white);
 }
 
 .phone-list--empty {
   text-align: center;
-  background-color: #F8F8FF;
+  background-color: var(--grey-light);
   margin: 0 14%;
   padding: 6%;
-  border: 10px #BECBCD solid;
+  border: 10px var(--grey) solid;
   font-size: 2em;
 }

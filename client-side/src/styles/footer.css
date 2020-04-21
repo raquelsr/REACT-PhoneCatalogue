@@ -1,6 +1,6 @@
 .footer {
-  background-color: teal;
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
   position: absolute;
   left: 0;
   bottom: 0;
