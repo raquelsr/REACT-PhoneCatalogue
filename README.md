@@ -13,10 +13,9 @@ $ npm install
 $ npm run start
 ```
 
-TYPE | ENDPOINT | Data
+Type | ENDPOINT | Data
 --- | --- | ---
 GET | `/phones` | Return all phones data
---- | --- | ---
 GET | `/phones/:id` | Return phone by *id*
 
 
